@@ -1,43 +1,34 @@
-// let a = ".";
-// let b = "2"
+let record = "";
+let operatorLock = true;
 
-// let c = b + a + b;
-// let num = Number(c);
-// console.log(num);
 
-let tempHolder = "";
-let tempHolder2 = "";
+//concatenates user input into the record variable  & Display
+function recorder(input){ 
+  record += input;
+  document.getElementById('display').value += input;
+  operatorLock = false;
+}
 
-function recorder(inputStr){
-  if(sign == 0){
-    tempHolder += inputStr;
+//this concatenates an operator into the record variable
+function operator(input){
+  if(operatorLock == false){
+    record += input;
+    document.getElementById('display').value += input;
+    operatorLock = true; //makes sure that you cannot stack multiple operators
   } else {
-    tempholder2 += inputStr;
+    //do nothing
   }
-};
-
-let num1 = Number(tempHolder);
-let num2 = Number(tempHolder2);
-var result = 0;
+}
 
 
-function operator(sign){
-  switch(sign){
-    case "add":
-      result = num1 + num2;
-      break;
-    case "substract":
-      result = num1 - num2;
-      break;
-    case "divide":
-      result = num1 / num2;
-      break;
-    case "multiply":
-      result = num1*num2;
-      break;
-  }
-};
+//this runs the eval() on string stored in record
+function evaluator(){
+  document.getElementById('display').value = eval(record);
+  record = eval(record);
+}
 
-
-operator("multiply");
-console.log(result);
+//this resets the calculator display & the record
+function reset(){ 
+  record = "";
+  document.getElementById('display').value = record;
+}

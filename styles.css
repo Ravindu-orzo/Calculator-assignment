@@ -11,8 +11,9 @@ button:hover{
 #display{
     width:98%;
     height:38px;
+    text-align: end;
 }
 
 .operator{
-    width:4%;
+    width:50px;
 }
