@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
 button{
     width:80px;
 }
 
-button:hover{
-    background-color: aliceblue !important;
-    color:black !important;
-    transform: scale(1.1);
+#numberpad button{
+    background-color: #91a8a4;
+    color:black;
 }
+
+#numberpad button:hover{
+    background-color: #a5c2bd !important;
+    transform: scale(1.05);
+}
+
+
 
 #display{
     width:98%;
@@ -16,4 +28,10 @@ button:hover{
 
 .operator{
     width:50px;
+    background-color: #776871;
+}
+
+.operator:hover{
+    background-color: #6b5059 !important;
+    transform: scale(1.05);
 }

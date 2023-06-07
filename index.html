@@ -13,29 +13,29 @@
         <div class="d-flex flex-row justify-content-center mt-3">
             <!-- mt-3 added to section elements in the "numberpad + display" div while it is added individual buttons in "operators panel" div -->
             <!-- numberpad + display -->
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column" id="numberpad">
                 <section>
                     <input type="text" id="display" disabled>
                 </section>
                 <section class="d-flex flex-row justify-content-center mt-3">
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('1')">1</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('2')">2</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('3')">3</button>  
+                    <button type="button" class="btn border-black me-1" onclick="recorder('1')">1</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('2')">2</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('3')">3</button>  
                 </section>
                 <section class="d-flex flex-row justify-content-center mt-3">
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('4')">4</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('5')">5</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('6')">6</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('4')">4</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('5')">5</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('6')">6</button>
                 </section>
                 <section class="d-flex flex-row justify-content-center mt-3">
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('7')">7</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('8')">8</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('9')">9</button> 
+                    <button type="button" class="btn border-black me-1" onclick="recorder('7')">7</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('8')">8</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('9')">9</button> 
                 </section>
                 <section class="d-flex flex-row justify-content-center mt-3">
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('.')">.</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="recorder('0')">0</button>
-                    <button type="button" class="btn btn-primary border-black me-1" onclick="evaluator()">=</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('.')">.</button>
+                    <button type="button" class="btn border-black me-1" onclick="recorder('0')">0</button>
+                    <button type="button" class="btn border-black me-1" onclick="evaluator()">=</button>
                 </section>
             </div>
             <!-- custom class "operator" added to adjust the width of buttons in operator panel -->
