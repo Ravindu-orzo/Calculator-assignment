@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container text-center">
+        <div class="d-flex flex-row justify-content-center mt-3">
+            <div class="d-flex flex-column p-3">
+                <section>
+                    <input type="text" id="display" disabled>
+                </section>
+                <section class="d-flex flex-row justify-content-center mt-3">
+                    <button type="button" class="btn btn-primary border-black me-1">1</button>
+                    <button type="button" class="btn btn-primary border-black me-1">2</button>
+                    <button type="button" class="btn btn-primary border-black me-1">3</button>  
+                </section>
+                <section class="d-flex flex-row justify-content-center mt-3">
+                    <button type="button" class="btn btn-primary border-black me-1">4</button>
+                    <button type="button" class="btn btn-primary border-black me-1">5</button>
+                    <button type="button" class="btn btn-primary border-black me-1">6</button>
+                </section>
+                <section class="d-flex flex-row justify-content-center mt-3">
+                    <button type="button" class="btn btn-primary border-black me-1">7</button>
+                    <button type="button" class="btn btn-primary border-black me-1">8</button>
+                    <button type="button" class="btn btn-primary border-black me-1">9</button> 
+                </section>
+                <section class="d-flex flex-row justify-content-center mt-3">
+                    <button type="button" class="btn btn-primary border-black me-1">.</button>
+                    <button type="button" class="btn btn-primary border-black me-1">0</button>
+                    <button type="button" class="btn btn-primary border-black me-1">=</button>
+                </section>
+            </div>
+            <div class="d-flex flex-column p-3">
+                <button class="btn btn-primary border-black me-1" id="operator">C</button>
+                <button type="button" class="btn btn-primary border-black me-1" class="operator">/</button>
+                <button type="button" class="btn btn-primary border-black me-1" id="operator">-</button>
+                <button type="button" class="btn btn-primary border-black me-1" id="operator">+</button>
+                <button type="button" class="btn btn-primary border-black me-1" id="operator">*</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

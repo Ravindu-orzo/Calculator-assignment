@@ -1,0 +1,17 @@
+button{
+    width:8%;
+}
+
+button:hover{
+    background-color: aliceblue !important;
+    color:black !important;
+    transform: scale(1.1);
+}
+
+#display{
+    width:24%;
+}
+
+.operator{
+    width:4%;
+}
