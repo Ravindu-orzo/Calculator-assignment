@@ -1,5 +1,5 @@
 button{
-    width:8%;
+    width:80px;
 }
 
 button:hover{
@@ -9,7 +9,8 @@ button:hover{
 }
 
 #display{
-    width:24%;
+    width:98%;
+    height:38px;
 }
 
 .operator{
