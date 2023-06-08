@@ -35,3 +35,10 @@ button{
     background-color: #6b5059 !important;
     transform: scale(1.05);
 }
+
+
+#wrapper{
+    background-color: #EEE5E9;
+    padding:10px;
+    border-radius:7px;
+}
