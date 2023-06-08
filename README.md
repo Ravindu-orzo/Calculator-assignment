@@ -1,5 +1,7 @@
-# Calculator-assignment
+# Calculator-assignment 
 This repo holds the files of an assignment given in web development course. Had to edit and restore a lot of code so decided to use git version control to make it less tedious. 
+
+![screenshot of the calculator i made using html,css,bootstrap and javascript](https://i.imgur.com/yu67WOd.png)
 
 ## Here's a quick rundown of the complicated lock mechanism implemented in the calculator using Javascript
 
