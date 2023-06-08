@@ -1,6 +1,9 @@
 let displayNum = ""; //remembers user input
 let operatorLock = true; //toggles operator panel ON and OFF
 let numpadLock = false; //toggles numpad ON and OFF
+let evaluatorLock  = false;
+let decimalLock1 = false;
+let decimalLock2 = false;
 
 //Displays user input numbers
 function recorder(input){ 
@@ -8,7 +11,9 @@ function recorder(input){
     displayNum += input;
     document.getElementById('display').value = displayNum;
     
-    operatorLock = false; 
+    operatorLock = false;
+    decimalLock2 = false;
+    evaluatorLock = false;
   } else{
     //do nothing
   }
@@ -22,6 +27,7 @@ function operator(input){
     
     operatorLock = true;
     numpadLock = false;
+    decimalLock1 = false;
   } else {
     //do nothing
   }
@@ -30,21 +36,28 @@ function operator(input){
 
 //Displays result
 function evaluator(){
-  document.getElementById('display').value = eval(displayNum);
-  let result = eval(displayNum);
-  displayNum = result.toString();
-  
-  numpadLock = true;
-  operatorLock = false;
+  if (evaluatorLock == false){
+    document.getElementById('display').value = eval(displayNum);
+    let result = eval(displayNum);
+    displayNum = result.toString();
+    
+    numpadLock = true;
+    operatorLock = false;
+  } else {
+    //do nothing
+  }
 }
 
 //Resets display & memory
 function reset(){ 
   displayNum = "";
-  document.getElementById('display').value = displayNum;
+  document.getElementById('display').value = "0";
   
   numpadLock = false;
   operatorLock = true;
+  evaluatorLock  = false;
+  decimalLock1 = false;
+  decimalLock2 = false;
 }
 
 
@@ -62,3 +75,20 @@ function reset(){
 
 //made by Ravindu Wijayarathna--> for evotech web dev course//
 
+function decimalPoint(){
+  if(decimalLock1 == false && decimalLock2 == false){
+    if(displayNum == "0" || operatorLock == true){
+      displayNum += "0.";
+      document.getElementById('display').value = displayNum;
+    } else{
+      displayNum += ".";
+      document.getElementById('display').value = displayNum;
+    }
+    decimalLock1 = true;
+    decimalLock2 = true;
+    operatorLock = true;
+    evaluatorLock = true;
+  } else {
+    //do nothing
+  }
+};
