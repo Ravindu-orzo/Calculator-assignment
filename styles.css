@@ -27,7 +27,7 @@ body{
 }
 
 /* Button styles */
-.operator,.numberKey{
+.operator,.numberKey,#buttonC{
     border:1px solid black;
     border-radius: 7px;
     height: 38px;
@@ -49,14 +49,19 @@ body{
 }
 
 .operator{
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     width: 50px;
 }
 
-.operator:hover{
+.operator:hover,#buttonC:hover{
     background-color: #6b5059 !important;
     transform: scale(1.05);
 }
+
+#buttonC{
+    width:50px;
+}
+
 
 /* styles for the Display */
 #display{

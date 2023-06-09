@@ -19,7 +19,7 @@ function recorder(input){
   }
 }
 
-//Displays user input operators, prevent stacking multiple operators
+//prevent stacking multiple operators & displays operators
 function operator(input){
   if(operatorLock == false){
     displayNum += input;
@@ -33,18 +33,42 @@ function operator(input){
   }
 }
 
+//prevent stacking multiple decimalpoints & displays decimal points
+function decimalPoint(){
+  if(decimalLock1 == false && decimalLock2 == false){
+    if(displayNum == "0" || operatorLock == true){
+      displayNum += "0.";
+      document.getElementById('display').value = displayNum;
+    } else{
+      displayNum += ".";
+      document.getElementById('display').value = displayNum;
+    }
+    decimalLock1 = true;
+    decimalLock2 = true;
+    operatorLock = true;
+    evaluatorLock = true;
+  } else {
+    //do nothing
+  }
+};
 
 //Displays result
 function evaluator(){
-  if (evaluatorLock == false){
+  if (evaluatorLock == false && displayNum != "" && !isNaN(eval(displayNum))){
     document.getElementById('display').value = eval(displayNum);
     let result = eval(displayNum);
     displayNum = result.toString();
     
     numpadLock = true;
     operatorLock = false;
-  } else {
-    //do nothing
+  } else if(evaluatorLock == false && displayNum == "") {
+    document.getElementById('display').value = "0";
+  } else if(evaluatorLock == false && isNaN(eval(displayNum))){
+    displayNum = "";
+    document.getElementById('display').value = "cannot divide by zero";
+
+    numpadLock = false;
+    operatorLock = true;
   }
 }
 
@@ -74,21 +98,3 @@ function reset(){
 
 
 //made by Ravindu Wijayarathna--> for evotech web dev course//
-
-function decimalPoint(){
-  if(decimalLock1 == false && decimalLock2 == false){
-    if(displayNum == "0" || operatorLock == true){
-      displayNum += "0.";
-      document.getElementById('display').value = displayNum;
-    } else{
-      displayNum += ".";
-      document.getElementById('display').value = displayNum;
-    }
-    decimalLock1 = true;
-    decimalLock2 = true;
-    operatorLock = true;
-    evaluatorLock = true;
-  } else {
-    //do nothing
-  }
-};
