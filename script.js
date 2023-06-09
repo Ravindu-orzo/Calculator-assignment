@@ -5,6 +5,9 @@ let evaluatorLock  = false;
 let decimalLock1 = false;
 let decimalLock2 = false;
 
+let zeroLock = true; //its on at first
+let zerocount = 0;
+
 //Displays user input numbers
 function recorder(input){ 
   if(numpadLock == false){
@@ -14,6 +17,7 @@ function recorder(input){
     operatorLock = false;
     decimalLock2 = false;
     evaluatorLock = false;
+    zeroLock = false;
   } else{
     //do nothing
   }
@@ -28,6 +32,8 @@ function operator(input){
     operatorLock = true;
     numpadLock = false;
     decimalLock1 = false;
+    zeroLock = true;
+    zerocount = 0;
   } else {
     //do nothing
   }
@@ -36,7 +42,7 @@ function operator(input){
 //prevent stacking multiple decimalpoints & displays decimal points
 function decimalPoint(){
   if(decimalLock1 == false && decimalLock2 == false){
-    if(displayNum == "0" || operatorLock == true){
+    if(displayNum == "" || operatorLock == true){ //CHNAGIN DISPLAYNUM == "0" TO ""
       displayNum += "0.";
       document.getElementById('display').value = displayNum;
     } else{
@@ -47,9 +53,30 @@ function decimalPoint(){
     decimalLock2 = true;
     operatorLock = true;
     evaluatorLock = true;
+    zeroLock = false;
+    zerocount = 0;
   } else {
     //do nothing
   }
+};
+
+//Prevents adding multiple 0 before a decimal point
+function zero(){
+  if(numpadLock == false && zeroLock == true ){
+    if(zerocount == 0){
+      displayNum += "0";
+      zerocount = 1;
+      document.getElementById('display').value = displayNum;
+    } else if(zerocount == 1){
+      //do nothing
+    }
+  } else if(numpadLock == false && zeroLock == false){
+    displayNum += "0";
+    document.getElementById('display').value = displayNum;
+  }
+  operatorLock = false;
+  decimalLock2 = false;
+  evaluatorLock = false;
 };
 
 //Displays result
@@ -61,6 +88,7 @@ function evaluator(){
     
     numpadLock = true;
     operatorLock = false;
+    decimalLock1 = true;
   } else if(evaluatorLock == false && displayNum == "") {
     document.getElementById('display').value = "0";
   } else if(evaluatorLock == false && isNaN(eval(displayNum))){
@@ -82,6 +110,7 @@ function reset(){
   evaluatorLock  = false;
   decimalLock1 = false;
   decimalLock2 = false;
+  zeroLock = true;
 }
 
 
@@ -98,3 +127,5 @@ function reset(){
 
 
 //made by Ravindu Wijayarathna--> for evotech web dev course//
+
+
