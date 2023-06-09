@@ -4,31 +4,53 @@ body{
     font-family: 'Rajdhani', sans-serif;
 }
 
-button{
-    width:80px;
+/* Div and flexboxes */
+.wrapper_parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3%;
+    background-color: #EEE5E9;
+    padding:10px;
+    border-radius:7px;
 }
 
-#numberpad button{
+.wrapper_child{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Button styles */
+.operator,.numberKey{
+    border:1px solid black;
+    border-radius: 7px;
+    height: 38px;
+    background-color: #776871;
+    color: aliceblue;
+}
+
+.numberKey{
+    margin-top:1rem;
+    margin-right: 0.25rem;
     background-color: #91a8a4;
     color:black;
+    width: 80px;
 }
 
-#numberpad button:hover{
+.numberKey:hover{
     background-color: #a5c2bd !important;
     transform: scale(1.05);
 }
 
-
-
-#display{
-    width:98%;
-    height:38px;
-    text-align: end;
-}
-
 .operator{
-    width:50px;
-    background-color: #776871;
+    margin-bottom: 1rem;
+    width: 50px;
 }
 
 .operator:hover{
@@ -36,9 +58,9 @@ button{
     transform: scale(1.05);
 }
 
-
-#wrapper{
-    background-color: #EEE5E9;
-    padding:10px;
-    border-radius:7px;
+/* styles for the Display */
+#display{
+    width:98%;
+    height:38px;
+    text-align: end;
 }
