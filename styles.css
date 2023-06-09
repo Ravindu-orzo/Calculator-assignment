@@ -5,6 +5,13 @@ body{
 }
 
 /* Div and flexboxes */
+.wrapper_main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 .wrapper_parent{
     display: flex;
     flex-direction: row;
@@ -12,6 +19,7 @@ body{
     margin: 3%;
     background-color: #EEE5E9;
     padding:10px;
+    border:1px solid rgb(139, 139, 139);
     border-radius:7px;
 }
 
@@ -28,7 +36,7 @@ body{
 
 /* Button styles */
 .operator,.numberKey,#buttonC{
-    border:1px solid black;
+    border:1px solid rgb(112, 111, 111);
     border-radius: 7px;
     height: 38px;
     background-color: #776871;
@@ -68,4 +76,6 @@ body{
     width:98%;
     height:38px;
     text-align: end;
+    background-color: azure;
+    color:rgb(109, 109, 109);
 }
