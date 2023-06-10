@@ -1,11 +1,11 @@
 let displayNum = ""; //remembers user input
 let operatorLock = true; //toggles operator panel ON and OFF
 let numpadLock = false; //toggles numpad ON and OFF
-let evaluatorLock  = false;
-let decimalLock1 = false;
+let evaluatorLock  = false;//toggles equal button ON and OFF
+let decimalLock1 = false;//toggles decimal point button ON and OFF
 let decimalLock2 = false;
-let zeroLock = true;
-let zerocount = 0;
+let zeroLock = true;//toggles zero button ON and OFF
+let zerocount = 0;//keeps count of how many zeros user added before a decimal point
 
 
 function recorder(input){ 
@@ -115,22 +115,8 @@ function reset(){
   zeroLock = true;
 }
 
-
-
-/////////DEV NOTES --- HOW NUMPAD LOCK AND OPERATOR PANEL LOCK WORKS ////////
-//the operator lock is 'true' by default. This prevents a user from entering an operator first before a number. 
-//(however, functionality for entering negetive values is not avaialble because of this.)
-
-//the numpad lock is 'false' by default. But numpad locks after hitting equal sign. this prevents the user from adding numbers 
-//to the result (ex: if result was 67 and if user hit the 8 key, 8 will concatenate to the result like this 678. numpad lock prevents this)
-
-//after getting the result, user can enter an operator to unlock the numpad and then can type in a number. this will allow the 
-//user to perform calculations on the result
-
-
-//made by Ravindu Wijayarathna--> for evotech web dev course//
-
 function calcHistory(){
   let result = eval(displayNum);
   document.getElementById('history').innerHTML += `<li>${displayNum} = ${result}</li>`;
 }
+

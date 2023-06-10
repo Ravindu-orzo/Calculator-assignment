@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="wrapper_main">
+        <!-- Calculator -->
         <div class="wrapper_parent">
             <!-- numberpad + display -->
             <div class="wrapper_child" id="numberpad">
@@ -36,7 +37,6 @@
                     <button type="button" class="numberKey" onclick="evaluator()">=</button>
                 </section>
             </div>
-            <!-- custom class "operator" added to adjust the width of buttons in operator panel -->
             <!-- operators panel -->
             <div class="wrapper_child">
                 <button type="button" id="buttonC" onclick="reset()">C</button>
@@ -46,6 +46,7 @@
                 <button type="button" class="operator" onclick="operator('*')">*</button>
             </div>
         </div>
+        <!-- Calc History -->
         <div class="wrapper_historyPanel">
             <div class="wrapper_header">Calculation history</div>
             <div class="wrapper_history">
