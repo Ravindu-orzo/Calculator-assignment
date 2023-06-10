@@ -17,3 +17,19 @@ These prevent user from
 3. using operators after entering a decimal point
 
 decimalLock 1 is assigned to the operator panel & decimalLock 2 is assigned to the numpad. these two work together to make the user enter a number before entering an operator, after a decimal point has been placed.
+
+##Features
+##It is responsive!
+Use of flexbox allows the two flex items; calculator and history panel to automatically arrange themselves vertically as the screen width decreases. This allows an optimized layout for both desktop and mobile!
+
+![Screenshot of caculator webpage on mobile](https://i.imgur.com/jvsRB3l.jpg)
+
+##It has a scrollable log of your calculations
+The log keeps track of your calculations, in case you needed refer to your past calculations in the future.
+
+![gif of scrolling the history panel](https://i.imgur.com/TAtCTrC.gif)
+
+##It looks great on dark theme!
+The color choice makes it look great on both light theme and dark theme.
+
+![screenshot of calculator webpage in dark theme](https://i.imgur.com/mzb2CfF.jpg)
