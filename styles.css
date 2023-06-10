@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');    
 
 body{
     font-family: 'Rajdhani', sans-serif;
+    min-width: 700px;
 }
 
 /* Div and flexboxes */
@@ -10,14 +11,6 @@ body{
     flex-direction: row;
     justify-content: center;
     margin-top: 1rem;
-}
-.wrapper_historyPanel{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    min-width: 20%;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 7px;
 }
 
 .wrapper_parent{
@@ -40,6 +33,29 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.wrapper_historyPanel{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    min-width: 20%;
+    max-width: 20%;
+    border:1px solid rgb(139, 139, 139);
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #EEE5E9;
+}
+
+.wrapper_header{
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.wrapper_history{
+    text-align: start;
+    overflow-y:auto;
+    max-height: 240px;
+    word-wrap: break-word;
 }
 
 /* Button styles */

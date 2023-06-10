@@ -33,6 +33,7 @@ function operator(input){
     decimalLock1 = false;
     zeroLock = true;
     zerocount = 0;
+    evaluatorLock = false;
   } else {
     //do nothing
   }
@@ -81,6 +82,7 @@ function zero(){
 
 function evaluator(){
   if (evaluatorLock == false && displayNum != "" && !isNaN(eval(displayNum))){ //calculates result and displays it
+    calcHistory();//adds the calculation to history panel
     document.getElementById('display').value = eval(displayNum);
     let result = eval(displayNum);
     displayNum = result.toString();
@@ -88,6 +90,7 @@ function evaluator(){
     numpadLock = true;
     operatorLock = false;
     decimalLock1 = true;
+    evaluatorLock = true;
   } else if(evaluatorLock == false && displayNum == "") { //handles error:(returning undefined after evaluating empty string)
     document.getElementById('display').value = "0";
   } else if(evaluatorLock == false && isNaN(eval(displayNum))){ //handles error:(returning NaN when dividing by zero)
@@ -126,3 +129,8 @@ function reset(){
 
 
 //made by Ravindu Wijayarathna--> for evotech web dev course//
+
+function calcHistory(){
+  let result = eval(displayNum);
+  document.getElementById('history').innerHTML += `<li>${displayNum} = ${result}</li>`;
+}
