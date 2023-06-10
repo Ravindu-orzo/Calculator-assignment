@@ -22,7 +22,7 @@ decimalLock 1 is assigned to the operator panel & decimalLock 2 is assigned to t
 ## It is responsive!
 Use of flexbox allows the two flex items; calculator and history panel to automatically arrange themselves vertically as the screen width decreases. This allows an optimized layout for both desktop and mobile!
 
-![Screenshot of caculator webpage on mobile](https://i.imgur.com/jvsRB3l.jpg)
+![Screenshot of caculator webpage on mobile](https://i.imgur.com/fk9otFL.jpg)
 
 ## It has a scrollable log of your calculations
 The log keeps track of your calculations, in case you needed refer to your past calculations in the future.
@@ -32,4 +32,4 @@ The log keeps track of your calculations, in case you needed refer to your past 
 ## It looks great on dark theme!
 The color choice makes it look great on both light theme and dark theme.
 
-![screenshot of calculator webpage in dark theme](https://i.imgur.com/mzb2CfF.jpg)
+![screenshot of calculator webpage in dark theme](https://i.imgur.com/lCMTURk.jpg)
